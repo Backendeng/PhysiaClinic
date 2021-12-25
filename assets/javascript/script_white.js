@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $(".dark_logo").css("display", "block");
+    $(".header_items a").css("color","#2D468D");
 
     //mobile navbar definition
     $(".hamburger>img").click(function(){
@@ -22,12 +24,12 @@ $(document).ready(function(){
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            $("header").css("display","none");
+            // $("header").css("display","none");
         } else {
-            $(".dark_logo").css("display", "block");
-            $(".light_logo").css("display", "none");
-            $("header").css({"display":"block", "background":"#fff"});
-            $(".header_items a").css("color","#2D468D")
+            // $(".dark_logo").css("display", "block");
+            // $(".light_logo").css("display", "none");
+            // $("header").css({"display":"block", "background":"#fff"});
+            // $(".header_items a").css("color","#2D468D")
             // $(".icons").css("display", "flex");
             // $(".icons_hover").removeClass("icon_show");
             // $(".hamburger_btn").prop("src","assets/images/hamburger.svg");
@@ -40,23 +42,23 @@ $(document).ready(function(){
         document.documentElement.scrollTop = 0;
     }
     // mouse scroll event
-    $("body").mousemove(function(event){
-        if($(document).scrollTop() > 20){
-            if(event.clientY <= 300){
-                $(".dark_logo").css("display", "block");
-                $(".light_logo").css("display", "none");
-                $("header").css({"display":"block","background-color":"white", "box-shadow":"0px 4px 25px rgba(45, 70, 141, 0.25)"});
-                $(".header_items a").css("color","#2D468D")
-                // $(".icons").css("display", "none");
-                // $(".icons_hover").addClass("icon_show");
-                // $(".hamburger_btn").prop("src","assets/images/hamburger_1.svg")
-            }else{
-                $("header").css("display","none");
-            }
-        }else{
-            $("header").css({"display":"block", "background":"white"});
-        }
-    });
+    // $("body").mousemove(function(event){
+    //     if($(document).scrollTop() > 20){
+    //         if(event.clientY <= 300){
+    //             $(".dark_logo").css("display", "block");
+    //             $(".light_logo").css("display", "none");
+    //             $("header").css({"display":"block","background-color":"white", "box-shadow":"0px 4px 25px rgba(45, 70, 141, 0.25)"});
+    //             $(".header_items a").css("color","#2D468D")
+    //             // $(".icons").css("display", "none");
+    //             // $(".icons_hover").addClass("icon_show");
+    //             // $(".hamburger_btn").prop("src","assets/images/hamburger_1.svg")
+    //         }else{
+    //             $("header").css("display","none");
+    //         }
+    //     }else{
+    //         $("header").css({"display":"block", "background":"white"});
+    //     }
+    // });
     $(".navbar_wrapper").hover(function(){
         $(".dark_logo").css("display", "block");
         $(".light_logo").css("display", "none");

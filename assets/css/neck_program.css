@@ -10,7 +10,7 @@
 .hero{
     background-size: cover;
     background-image: linear-gradient(to bottom, rgba(45, 70, 141, 0.7), rgba(45, 70, 141, 0.7)),
-    url('../images/lower_p.png');
+    url('../images/neck_p.png');
     background-repeat: no-repeat;
     background-position: center center;
 }
