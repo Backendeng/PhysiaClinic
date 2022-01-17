@@ -101,31 +101,31 @@
                 <div class="voting-grid">
                     <div>
                         <figure class="vote">
-                            <img src="assets/images/img-17.svg" alt="" />
+                            <div><img src="assets/images/img-17.svg" alt="" /></div>
                             <figcaption>Terrible</figcaption>
                         </figure>
                     </div>
                     <div>
                         <figure class="vote">
-                            <img src="assets/images/img-17.svg" alt="" />
+                            <div><img src="assets/images/img-18.svg" alt="" /></div>
                             <figcaption>Bad</figcaption>
                         </figure>
                     </div>
                     <div>
                         <figure class="vote">
-                            <img src="assets/images/img-17.svg" alt="" />
+                            <div><img src="assets/images/img-19.svg" alt="" /></div>
                             <figcaption>Okay</figcaption>
                         </figure>
                     </div>
                     <div>
                         <figure class="vote">
-                            <img src="assets/images/img-17.svg" alt="" />
+                            <div><img src="assets/images/img-20.svg" alt="" /></div>
                             <figcaption>Good</figcaption>
                         </figure>
                     </div>
                     <div>
                         <figure class="vote">
-                            <img src="assets/images/img-17.svg" alt="" />
+                            <div><img src="assets/images/img-21.svg" alt="" /></div>
                             <figcaption>Great</figcaption>
                         </figure>
                     </div>
@@ -178,6 +178,20 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/javascript/script_white.js"></script>      
+    <script src="assets/javascript/script_white.js"></script>
+    <script>
+    var votes = document.getElementsByClassName("vote");
+    for (var i = 0; i < votes.length; i++) {
+        votes[i].addEventListener("click", function() {
+            var img = this.getElementsByTagName("img")[0];
+            for (var j = 0; j < votes.length; j++) { 
+                votes[j].classList.remove("active");
+                votes[j].getElementsByTagName("img")[0].src = votes[j].getElementsByTagName("img")[0].src.replace(/img-([0-9]+)-blue.svg/, "img-$1.svg");
+            }
+            this.classList.add("active");
+            img.src = img.src.replace(/img-([0-9]+).svg/, "img-$1-blue.svg");
+        });
+    }
+    </script>      
 </body>
 </html>

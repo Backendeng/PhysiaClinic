@@ -68,7 +68,7 @@ a{
 .header_items a:hover{
     /* color: #2D468D; */
     cursor: pointer;
-    border-bottom: 1px solid #fff;
+    /*border-bottom: 1px solid #fff;*/
 }
 .navbar_prog{
     height: 100%;

@@ -48,7 +48,7 @@ button:active{
 .header_items{
     min-width: 335px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -56,14 +56,16 @@ button:active{
     line-height: 50px;
     height: 100%;
 }
+.header_items > *:not(:last-child) {
+    margin-right: 50px;
+}
 a{
     color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-.header_items a:hover{
-    /* color: #2D468D; */
+.header_items > a:hover{
     cursor: pointer;
     border-bottom: 1px solid #fff;
 }
@@ -234,14 +236,20 @@ a{
 }
 .nav_1 p, .nav_2 p, .nav_3 p{
     margin: 0;
-    border-bottom: 2px solid #36ACFC;
+    /*  border-bottom: 2px solid #36ACFC;  */
     width: fit-content;
+}
+.nav_1 p{
+    border-bottom: 2px solid #FF8F2F;
 }
 .nav_2 p, .nav_3 p{
     opacity: 0.5;
 }
 .nav_2 span, .nav_3 span{
     padding-left: 18px;
+}
+.nav_2 span, .nav_3 span{
+    font-size: 12px;
 }
 .nav_1:hover p, .nav_2:hover p, .nav_3:hover p{
     border-bottom: 2px solid #F34E23;
